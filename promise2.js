@@ -7,12 +7,18 @@ fetch("http://jsonplaceholder.typicode.com/users").then(
 
 //THE CALLBACK FUNCTION WILL RECEIVE A RESPONSE FROM THE API
 (response)=>{
-    console.log(response)
-    console.log(response.status)
-    console.log(response.url)
+    //console.log(response);
+    //.JSON GAVE US A PROMISE
+    response.json();
+    //console.log(response.status)
+    //console.log(response.url)
 }
 
-).catch(
+).then( (body)=>{
+
+     console.log(body);
+
+}).catch(
     
      (err)=>{
 

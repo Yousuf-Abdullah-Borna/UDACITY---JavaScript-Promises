@@ -11,13 +11,25 @@ setTimeout( ()=>{
 console.log("I am last but still I got excuted")
 */
 
+
+//CREATED OUR FIRST PROMISE
 let myFirstPromise = new Promise((resolve, reject) =>{
 
-  let name = "Yousuf"
+  let name = "Yousuf";
 
-  resolve(name)
+  setTimeout(()=> resolve(name),3000);
 
 })
 
-console.log(myFirstPromise)
+//console.log(myFirstPromise)
 
+//NEXT STEP
+
+myFirstPromise.then(
+
+    (nam)=>{
+
+        console.log("Promise works")
+    }
+
+)
